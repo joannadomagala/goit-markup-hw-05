@@ -52,7 +52,13 @@
             <span>efektywne rozwiązania</span>
             <span>dla waszego biznesu</span>
           </h1>
-          <button type="button" class="button-main-side">Zamów usługe</button>
+          <button data-modal-open type="button" class="button-main-side">
+            Zamów usługe
+          </button>
+          <div class="backdrop is-hidden"></div>
+          <div class="modal is-hidden" data-modal>
+            <button data-modal-close>X</button>
+          </div>
         </div>
       </section>
 
@@ -120,29 +126,32 @@
       <section class="task-list section container">
         <div class="task-list-container container">
           <h2 class="task-list-title">Czym się zajmujemy</h2>
-          <ul class="task-list-pics container">
-            <li>
+          <div class="task-list-pics container">
+            <figure>
               <img
                 src="images/img-work-1.jpg"
                 alt="view of a hand on a computer keyboard"
                 width="370"
               />
-            </li>
-            <li>
+              <figcaption>Opis obrazka 1</figcaption>
+            </figure>
+            <figure>
               <img
                 src="images/img-work-2.jpg"
                 alt="man uses phone and computer"
                 width="370"
               />
-            </li>
-            <li>
+              <figcaption>Opis obrazka 2</figcaption>
+            </figure>
+            <figure>
               <img
                 src="images/img-work-3.jpg"
                 alt="tablet view with color palette"
                 width="370"
               />
-            </li>
-          </ul>
+              <figcaption>Opis obrazka 3</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
       <section class="crew section">
