@@ -91,12 +91,14 @@ header {
 .navigation li a::after {
   content: "";
   position: absolute;
+  border-radius: 2px;
   left: 0;
-  bottom: -32px;
+  bottom: -32.5px;
   width: 0;
   height: 4px;
+
   background-color: var(--hover-focus-color);
-  transition: width 0.2s ease-in-out;
+  transition: width 0.25s ease-in-out;
 }
 .navigation li a:hover::after {
   width: 100%;
@@ -354,18 +356,19 @@ button.button-main-side:hover {
   transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg)
     skew(40deg, 40deg);
 }
-/* MODAL
+/* MODAL -------------------------------------------------
  */
-/* .modal {
+.modal {
   position: absolute;
   width: 528px;
   height: 581px;
-  align-items: center;
+  left: 536px;
+  top: 221px;
+
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  z-index: 0;
 }
 .backdrop {
   position: fixed;
@@ -377,7 +380,7 @@ button.button-main-side:hover {
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-} */
+}
 /* .modal::before {
   content: "";
   position: fixed;
@@ -390,8 +393,9 @@ button.button-main-side:hover {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-/* } */
+} */
 
+/* ------------------------------------------- */
 .task-icons {
   display: flex;
   justify-content: center;
@@ -652,27 +656,70 @@ button.button-filter:focus {
 .brand-container {
   margin-top: 50px;
   padding-top: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 30px;
 }
 .brand-card {
-  background-color: var(--background-color-brand-card);
   border: 1px solid var(--border-color-brand-card);
+  box-sizing: border-box;
+  width: 370px;
+}
+.brand-pics-container {
+  background-color: var(--background-color-brand-card);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
 }
 .brand-card:hover,
-.brand-card:focus {
+.brand-cardr:focus {
   background: var(--background-color-brand-card);
   box-shadow: var(--box-shadow-brand-card);
   border-radius: 0px 0px 4px 4px;
 }
-.brand-card img {
+.brand-pics-container:hover > .card-descr,
+.brand-card:hover .card-descr {
+  transform: translateY(0);
+}
+.brand-card:hover .card-descr::before {
+  content: "";
+  position: absolute;
   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--hover-focus-color);
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in;
 }
-.brand-pictures {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+.brand-pics-container > img {
+  display: block;
+  object-fit: cover;
 }
+.card-descr {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--font-color-special);
+  letter-spacing: 0.03em;
+  width: 370px;
+  height: 294px;
+  padding-left: 24px;
+  padding-right: 45px;
+  padding-top: 49px;
+  padding-bottom: 49px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in;
+}
+
 .brand-task {
   font-size: 18px;
   font-weight: 700;
