@@ -698,7 +698,7 @@ button.button-filter:focus {
   display: block;
   object-fit: cover;
 }
-.card-descr {
+/* .card-descr {
   font-family: inherit;
   font-size: 18px;
   line-height: 28px;
@@ -737,4 +737,4 @@ button.button-filter:focus {
   padding: 0 0 20px 24px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-}
+} */
