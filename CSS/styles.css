@@ -84,6 +84,9 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+}
+
+.portfolio {
   border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
 .navigation li {
@@ -99,7 +102,10 @@ header {
   width: 0;
   height: 4px;
   background-color: var(--hover-focus-color);
-  transition: width 0.25s ease-in-out;
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation li a:hover::after {
   width: 100%;
@@ -158,6 +164,10 @@ a:visited {
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .kontakt-up .email-header-icon:hover a,
 .kontakt-up .phone-header-icon:hover a {
@@ -170,6 +180,10 @@ a:visited {
 a:hover,
 a:focus {
   color: var(--hover-focus-color);
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .active a {
   color: var(--font-color-active);
@@ -227,6 +241,10 @@ footer {
 .kontakt-footer:hover a,
 .kontakt-footer:focus a {
   color: var(--hover-focus-color);
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .kontakt-down {
   font-size: 14px;
@@ -290,6 +308,10 @@ footer {
 }
 .icon-circle:hover {
   background-color: var(--hover-focus-color);
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* INDEX */
 .container-main-side {
@@ -561,6 +583,10 @@ ul.home-list {
   height: 44px;
   border-radius: 50%;
   cursor: pointer;
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-title {
   font-size: 36px;
@@ -571,43 +597,47 @@ ul.home-list {
   margin-top: 94px;
   text-align: center;
 }
+
 .client-list {
   list-style: none;
   display: flex;
   justify-content: center;
-  list-style: none;
   gap: 30px;
   margin-bottom: 94px;
 }
+
 .client-icon-card,
 .client-icon-card a {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #afb1b8;
   border-radius: 4px;
   width: 170px;
   height: 92px;
 }
+.client-icon-card {
+  border: 1px solid #afb1b8;
+}
+
 .client-icon-card svg {
   fill: rgba(175, 177, 184, 1);
 }
+
 .client-icon-card:hover,
 .client-icon-card:focus {
   fill: var(--hover-focus-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid var(--hover-focus-color);
-  border-radius: 4px;
-  width: 170px;
-  height: 92px;
   cursor: pointer;
 }
 .client-icon-card:hover svg,
 .client-icon-card:focus svg {
   fill: var(--hover-focus-color);
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /* PORTFOLIO */
 .filter-container {
   display: flex;
@@ -637,6 +667,10 @@ ul.home-list {
   cursor: pointer;
   line-height: 1.625;
   letter-spacing: 0.03em;
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 button.button-filter:hover,
 button.button-filter:focus {
@@ -674,6 +708,10 @@ button.button-filter:focus {
   background: var(--background-color-brand-card);
   box-shadow: var(--box-shadow-brand-card);
   border-radius: 0px 0px 4px 4px;
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .brand-pics-container:hover > .card-descr,
 .brand-card:hover .card-descr {
