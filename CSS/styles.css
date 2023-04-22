@@ -163,8 +163,6 @@ a:visited {
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .kontakt-up .email-header-icon:hover a,
 .kontakt-up .phone-header-icon:hover a {
@@ -175,6 +173,7 @@ a:visited {
 .kontakt-up .email-header-icon:hover svg use,
 .kontakt-up .phone-header-icon:hover svg use {
   fill: var(--hover-focus-color);
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 a:hover,
 a:focus {
@@ -367,6 +366,8 @@ button.button-main-side:hover {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  transition: transform 0.3s ease-out;
+  transition-property: visibility, opacity;
 }
 .backdrop {
   position: fixed;
@@ -388,7 +389,8 @@ button.button-main-side:hover {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-out;
 }
 .modal [data-modal-close] {
   position: fixed;
@@ -404,10 +406,9 @@ button.button-main-side:hover {
   text-align: center;
   z-index: 1;
 }
-
 .is-hidden .modal {
-  transform: scale(0);
-  transition: transform 0.3s ease-in;
+  transform: translate(0%, -1000%) scale(0);
+  transition: transform 0.3s ease-out;
 }
 /* ------------------------------------------- */
 .task-icons {
