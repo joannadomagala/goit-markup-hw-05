@@ -103,7 +103,8 @@ header {
   height: 4px;
   background-color: var(--hover-focus-color);
   transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    border-bottom 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
 }
 .navigation li a:hover::after {
   width: 100%;
@@ -168,6 +169,8 @@ a:visited {
 .kontakt-up .email-header-icon:hover a,
 .kontakt-up .phone-header-icon:hover a {
   color: var(--hover-focus-color);
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .kontakt-up .email-header-icon:hover svg use,
 .kontakt-up .phone-header-icon:hover svg use {
