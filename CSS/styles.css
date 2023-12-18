@@ -1,15 +1,17 @@
 :root {
   --icon-client-color: rgba(142, 143, 153, 1);
   --icon-kontakt-color: rgba(117, 117, 117, 1);
-  --logo-web-color: rgba(64, 75, 191, 1);
+  --logo-web-color: rgba(77, 90, 229, 1);
   --button-color: rgba(245, 244, 250, 1);
+  --button-color-porfolio: rgba(231, 233, 252, 1);
   --button-color-main-side: rgba(77, 90, 229, 1);
   --hover-focus-color: rgba(64, 75, 191, 1);
   --font-color-basic: rgba(46, 47, 66, 1);
   --font-color-active: rgba(64, 75, 191, 1);
-  --font-color-describe: rgba(117, 117, 117, 1);
+  --font-color-describe: rgba(67, 68, 85, 1);
   --font-color-special: rgba(255, 255, 255, 1);
-  --font-color-footer: rgba(255, 255, 255, 0.6);
+  --font-color-footer: rgba(244, 244, 253, 1);
+  --font-color-btn-portf: rgba(77, 90, 229, 1);
   --background-sides-element-color: rgba(47, 48, 58, 1);
   --background-color-crew: rgba(245, 244, 250, 1);
   --background-color-crew-card: rgba(255, 255, 255, 1);
@@ -149,12 +151,7 @@ a:visited {
   line-height: 1.17;
   letter-spacing: 0.03em;
 }
-.kontakt-up svg {
-  fill: var(--icon-kontakt-color);
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-}
+
 .kontakt-up li:first-child {
   margin-right: 50px;
 }
@@ -172,11 +169,6 @@ a:visited {
   transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.kontakt-up .email-header-icon:hover svg use,
-.kontakt-up .phone-header-icon:hover svg use {
-  fill: var(--hover-focus-color);
-  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
 a:hover,
 a:focus {
   color: var(--hover-focus-color);
@@ -186,15 +178,7 @@ a:focus {
 .active a {
   color: var(--font-color-active);
 }
-.icon-header {
-  fill: var(--font-color-describe);
-  vertical-align: middle;
-  margin-right: 10px;
-}
-.phone-header-icon,
-.email-header-icon {
-  padding-right: 10px;
-}
+
 /* FOOTER */
 footer {
   background-color: var(--background-sides-element-color);
@@ -228,22 +212,7 @@ footer {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-/*
-.kontakt-footer a {
-  font-size: 14px;
-  color: var(--font-color-footer);
-  font-family: inherit;
-  font-weight: inherit;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-.kontakt-footer:hover a,
-.kontakt-footer:focus a {
-  color: var(--hover-focus-color);
-  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-*/
+
 .footer-describe {
   font-size: 14px;
   list-style: none;
@@ -497,14 +466,7 @@ ul.home-list {
   display: flex;
   align-items: center;
 }
-/*
-.task-list-pics figcaption {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-*/
+
 .crew {
   background-color: var(--background-color-crew);
   text-align: center;
@@ -657,7 +619,8 @@ ul.home-list {
   font-size: 16px;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--button-color);
+  color: var(--font-color-btn-portf);
+  background-color: var(--button-color-porfolio);
   padding: 6px 22px 6px 22px;
   border: none;
   border-radius: 4px;
