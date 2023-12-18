@@ -1,12 +1,12 @@
 :root {
-  --icon-client-color: rgba(175, 177, 184, 1);
+  --icon-client-color: rgba(142, 143, 153, 1);
   --icon-kontakt-color: rgba(117, 117, 117, 1);
-  --logo-web-color: rgba(33, 150, 243, 1);
+  --logo-web-color: rgba(64, 75, 191, 1);
   --button-color: rgba(245, 244, 250, 1);
-  --button-color-main-side: rgba(33, 150, 243, 1);
-  --hover-focus-color: rgba(33, 150, 243, 1);
-  --font-color-basic: rgba(33, 33, 33, 1);
-  --font-color-active: rgba(33, 150, 243, 1);
+  --button-color-main-side: rgba(77, 90, 229, 1);
+  --hover-focus-color: rgba(64, 75, 191, 1);
+  --font-color-basic: rgba(46, 47, 66, 1);
+  --font-color-active: rgba(64, 75, 191, 1);
   --font-color-describe: rgba(117, 117, 117, 1);
   --font-color-special: rgba(255, 255, 255, 1);
   --font-color-footer: rgba(255, 255, 255, 0.6);
@@ -15,6 +15,8 @@
   --background-color-crew-card: rgba(255, 255, 255, 1);
   --background-color-brand-card: rgba(255, 255, 255, 1);
   --background-color-icons: rgba(245, 244, 250, 1);
+  --background-color-icons-footer: rgba(77, 90, 229, 1);
+  --background-color-icons-footer-hover: rgba(49, 208, 170, 1);
   --background-color-cirkle-footer: rgba(255, 255, 255, 0.1);
   --background-color-decription: rgba(47, 48, 58, 0.8);
   --background-color-modal: rgba(255, 255, 255, 1);
@@ -226,6 +228,7 @@ footer {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+/*
 .kontakt-footer a {
   font-size: 14px;
   color: var(--font-color-footer);
@@ -240,20 +243,17 @@ footer {
   transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.kontakt-down {
+*/
+.footer-describe {
   font-size: 14px;
   list-style: none;
   color: var(--font-color-footer);
   padding-bottom: 60px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  width: 264px;
 }
-.kontakt-down li {
-  display: block;
-}
-.kontakt-down li:first-child a {
-  margin-bottom: 9px;
-}
+
 .social-footer-container {
   fill: var(--font-color-special);
   flex: 1;
@@ -289,19 +289,23 @@ footer {
   align-items: flex-start;
   cursor: pointer;
 }
+
 .icon-circle,
 .icon-circle a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: var(--background-color-cirkle-footer);
+  background-color: var(--background-color-icons-footer);
   cursor: pointer;
 }
-.icon-circle:hover {
-  background-color: var(--hover-focus-color);
+.icon-circle:hover,
+.icon-circle:focus,
+.icon-circle a:hover,
+.icon-circle a:focus {
+  background-color: var(--background-color-icons-footer-hover);
   transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -320,8 +324,8 @@ footer {
   margin: 0 auto;
   background-image: linear-gradient(
       to bottom,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
     ),
     url(../images/img-overlay.jpg);
   background-repeat: no-repeat;
@@ -445,11 +449,12 @@ ul.home-list {
   letter-spacing: 0.03em;
 }
 .list-descr {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--font-color-describe);
   margin-top: 10px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  width: 270px;
 }
 .task-list-container {
   display: inline-block;
@@ -492,12 +497,14 @@ ul.home-list {
   display: flex;
   align-items: center;
 }
+/*
 .task-list-pics figcaption {
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+*/
 .crew {
   background-color: var(--background-color-crew);
   text-align: center;
@@ -573,8 +580,8 @@ ul.home-list {
   background-color: transparent;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   cursor: pointer;
   transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
@@ -666,13 +673,10 @@ button.button-filter:hover,
 button.button-filter:focus {
   background-color: var(--hover-focus-color);
   color: var(--font-color-special);
-}
-button.button-filter:hover,
-button.button-filter:focus {
-  background: var(--hover-focus-color);
   box-shadow: var(--box-shadow-button-filter);
   border-radius: 4px;
 }
+
 .brand-container {
   margin-top: 50px;
   padding-top: 0;
@@ -719,6 +723,7 @@ button.button-filter:focus {
 .brand-pics-container > img {
   display: block;
   object-fit: cover;
+  width: 100%;
 }
 .card-descr {
   font-family: inherit;
@@ -727,7 +732,6 @@ button.button-filter:focus {
   color: var(--font-color-special);
   letter-spacing: 0.03em;
   width: 370px;
-  height: 294px;
   padding-left: 24px;
   padding-right: 45px;
   padding-top: 49px;
