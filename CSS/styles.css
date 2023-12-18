@@ -93,22 +93,19 @@ header {
 .portfolio {
   border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
-.navigation li {
+.navigation li:first-child a: {
   position: relative;
+  color: #404bbf;
 }
-.navigation li a::after {
+.navigation li:first-child a::after {
   content: "";
   position: absolute;
-  border-radius: 2px;
   left: 0;
-  display: block;
-  margin-top: 28px;
-  width: 0;
+  bottom: -1px;
   height: 4px;
-  background-color: var(--hover-focus-color);
-  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    border-bottom 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  background-color: #404bbf;
+  border-radius: 2px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation li a:hover::after {
   width: 100%;
@@ -163,12 +160,7 @@ a:visited {
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
-.kontakt-up .email-header-icon:hover a,
-.kontakt-up .phone-header-icon:hover a {
-  color: var(--hover-focus-color);
-  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 a:hover,
 a:focus {
   color: var(--hover-focus-color);
@@ -327,12 +319,12 @@ h1 span {
   margin-top: 30px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 button.button-main-side:hover {
   background-color: var(--hover-focus-color);
   color: var(--font-color-special);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* MODAL -------------------------------------------------
  */
