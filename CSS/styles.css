@@ -125,7 +125,7 @@ header {
 .navigation li a:hover::after {
   width: 100%;
 }
-.logo-nav {
+.logo-nav-link {
   display: flex;
   align-items: center;
 }
@@ -145,7 +145,7 @@ a:visited {
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
-.logo-nav,
+.logo-nav-link,
 .navigation {
   display: flex;
 }
